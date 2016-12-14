@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+        <div id="main" style="width: 1000px;height:400px;"></div>
+
+
+
+    <script src="echarts.min.js"></script>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 使用刚指定的配置项和数据显示图表。
+        option = {
+            title: {
+                text: 'NFA转化为最小化的DFA'
+            },
+            tooltip: {},
+            animationDurationUpdate: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series : [
+                {
+                    type: 'graph',
+                    layout: 'none',
+                    symbolSize: 50,
+                    roam: true,
+                    label: {
+                        normal: {
+                            show: true
+                        }
+                    },
+                    edgeSymbol: ['circle', 'arrow'],
+                    edgeSymbolSize: [4, 10],
+                    edgeLabel: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 20
+                            }
+                        }
+                    },
+                    data: [{
+                        name: '节点1',
+                        x: 300,
+                        y: 300
+                    }, {
+                        name: '节点2',
+                        x: 800,
+                        y: 300
+                    }, {
+                        name: '节点3',
+                        x: 550,
+                        y: 100
+                    }, {
+                        name: '节点4',
+                        x: 550,
+                        y: 500
+                    }],
+                    // links: [],
+                    links: [{
+                        source: 1,
+                        target: 1,
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 5,
+                                curveness: 0
+                            }
+                        }
+                    }, {
+                        source: '节点1',
+                        target: '节点1',
+                        label: {
+                            normal: {
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: { curveness: 0.9 }
+                        }
+                    }, {
+                        source: '节点1',
+                        target: '节点3'
+                    }, {
+                        source: '节点2',
+                        target: '节点3'
+                    }, {
+                        source: '节点2',
+                        target: '节点4'
+                    }, {
+                        source: '节点1',
+                        target: '节点4'
+                    },{
+                        source: '节点1',
+                        target: '节点1'
+                    }],
+                    lineStyle: {
+                        normal: {
+                            opacity: 0.9,
+                            width: 2,
+                            curveness: 0.2
+                        }
+                    }
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+    </body>
+</html>

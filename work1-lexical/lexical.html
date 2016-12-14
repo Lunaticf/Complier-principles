@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>可视化词法分析</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../semantic.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="ui container" style="margin-top:30px;">
+        <div class="ui two column doubling grid">
+            <div class="column">
+                <div class="ui raised segment">
+                    <div class="ui form">
+                        <div class="field">
+                            <label>Text</label>
+                            <textarea spellcheck="false" id="input"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui card raised" style="width:100%;">
+                    <div class="image">
+                        <img src="yourname.jpg" style="height:330px">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="https://movie.douban.com/subject/26683290/">你的名字</a>
+                        <div class="description">
+                            不管你在世界的哪个地方，我一定会，再次去见你的。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui piled segment">
+                    <h3 class="ui horizontal divider header">
+                        Lexical analysis
+                    </h3>
+                    <div class="outmaxh" style="overflow: scroll;max-height: 550px;">
+                        <table class="ui fixed compact stackable striped selectable celled table">
+                            <thead>
+                                <tr>
+                                    <th>word</th>
+                                    <th>type</th>
+                                </tr>
+                            </thead>
+                            <tbody id="out">
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lexical.web.js"></script>
+
+</body>
+
+</html>

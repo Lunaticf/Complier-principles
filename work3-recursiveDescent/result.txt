@@ -1,0 +1,11 @@
+please input the sentence(end with #)
+E->TE'
+T->FT'
+F->i
+T'->ε
+E'->+TE'
+T->FT'
+F->i
+T'->ε
+E'->ε
+the sentence is right!

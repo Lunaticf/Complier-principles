@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>递归下降子程序</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../semantic.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="ui container" style="margin-top:30px;">
+        <div class="ui two column doubling grid">
+            <div class="column">
+                <div class="ui raised segment">
+                    <div class="ui form">
+                        <div class="field">
+                            <label>Text</label>
+                            <textarea spellcheck="false" id="input"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui card raised" style="width:100%;">
+                    <div class="image">
+                        <img src="kingsman.jpeg" style="height:330px">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="https://movie.douban.com/subject/24405378/?referer=baidu_search">王牌特工</a>
+                        <div class="description">
+                            Manners maketh man.
+                            礼仪造就人品。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui piled segment">
+                    <h3 class="ui horizontal divider header">
+                        递归下降分析
+                    </h3>
+                    <div class="outmaxh" style="overflow: scroll;max-height: 550px;">
+                        <table class="ui fixed compact stackable striped selectable celled table">
+                            <thead class="ui center aligned ">
+                                <tr>
+                                    <th>rule</th>
+                                </tr>
+                            </thead>
+                            <tbody id="out">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="recursiveDesc.web.js"></script>
+
+</body>
+</html>
