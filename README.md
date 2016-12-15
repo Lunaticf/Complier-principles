@@ -1,5 +1,6 @@
 # Complier-principles
-Complier principles practice in HDU. Teacher:HXX
+Complier principles practice in HDU by Node.js  Teacher:HXX
+
 HDU编译原理课程设计
 ## 词法分析器
 

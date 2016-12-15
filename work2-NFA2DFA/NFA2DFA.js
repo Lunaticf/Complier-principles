@@ -501,7 +501,7 @@ function StateMachine() {
     }
 }
 
-fs.readFile('/Users/lunaticf/Documents/vscodeWorkSpace/compiler/work2-NFA2DFA/input.json', 'UTF-8', function (err, data) {
+fs.readFile('/Users/lunaticf/Documents/vscodeWorkSpace/Complier-principles/work2-NFA2DFA/input.json', 'UTF-8', function (err, data) {
     if (err) throw err;
     data = JSON.parse(data);
     var machine = new StateMachine();
@@ -528,7 +528,7 @@ fs.readFile('/Users/lunaticf/Documents/vscodeWorkSpace/compiler/work2-NFA2DFA/in
     minimizedDFA.test('aaabb');
 
     // 结果写入output.txt
-    fs.writeFile('/Users/lunaticf/Documents/vscodeWorkSpace/compiler/work2-NFA2DFA/output.txt', resultStr, function (err) {
+    fs.writeFile('/Users/lunaticf/Documents/vscodeWorkSpace/Complier-principles/work2-NFA2DFA/output.txt', resultStr, function (err) {
         if (err) throw err;
         console.log('result is saved.');
     });
